@@ -44,7 +44,7 @@ class BodyDownload(QWidget):
     def make_assign_item(self):
         # search_area 정보
         self.search_url = QLineEdit()   # 비디오 검색
-        self.search_url.setText("주소를 입력해 주세요.")
+        self.search_url.setPlaceholderText("주소를 입력해 주세요.")
         self.search_url.setFixedHeight(50)  #
         self.search_url.setFont(QFont('Arial', 15))
         self.search_url.returnPressed.connect(self.search_button_click)
