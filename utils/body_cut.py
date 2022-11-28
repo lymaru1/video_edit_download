@@ -111,8 +111,13 @@ class BodyCut(QWidget):
         start = self.start_time.text()
         end = self.end_time.text()
         try:
-            # ffmpeg 폴더에 있어야 한다.
-            result = subprocess.Popen(['./ffmpeg/bin/ffmpeg',
+            if os.path.isdir("ffmpeg"):
+                # ffmpeg 폴더가 있어야함
+                ffmpeg_run: str = './ffmpeg/bin/ffmpeg'
+            else:
+                # ffmpeg 설치되어 있어야함
+                ffmpeg_run: str = 'ffmpeg'
+            result = subprocess.Popen([ffmpeg_run,
                                        '-i', self.video_file,
                                        '-ss', start,
                                        '-to', end,
