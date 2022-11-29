@@ -41,4 +41,4 @@ pip install pyside6 opencv-python
 
 ***
 ## 파일 exe
-pyinstaller --clean -w --icon=logo.ico -F -n 위클리 main.py
+pyinstaller --clean -w --icon=logo.ico -F -n wicly main.py

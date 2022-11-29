@@ -32,7 +32,7 @@ class MainUI(QMainWindow):
         """
         윈도우 창 세팅
         """
-        self.setWindowTitle('Video Editor')   # 윈도우 창 이름 설정
+        self.setWindowTitle('wicly')   # 윈도우 창 이름 설정
         self.setWindowIcon(QIcon(":/image/logo.png"))   # 프로그램 창의 아이콘 설정
         self.resize(self.screen_width, self.screen_height)  # 프로그램 창 사이즈 설정
 
